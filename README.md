@@ -5,7 +5,7 @@ A simple project showing dynamic web page with filter search of given designs. S
 **Teaching credits:** [https://www.youtube.com/watch?v=Q7H3_A0KmbU](https://www.youtube.com/watch?v=Q7H3_A0KmbU)
 
 ## Technologies
-Front-end & Back end: PHP
+Front-end & Back end: **PHP**
 
-Database: MySQL
+Database: **MySQL**
 
