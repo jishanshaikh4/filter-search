@@ -7,5 +7,5 @@ A simple project showing dynamic web page with filter search of given designs. S
 ## Technologies
 Front-end & Back end: **PHP including HTML and CSS**
 
-Database: **MySQL**
+Database: **MySQL** (See the SQL commands in the sql file).
 
