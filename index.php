@@ -1,4 +1,5 @@
 <?php 
+
 include("config.php");
 $all_brand=$db->query("SELECT distinct brand FROM `products` WHERE category_id = '1' GROUP BY brand");
 $all_material=$db->query("SELECT distinct material FROM `products` WHERE category_id = '1' GROUP BY material");
@@ -170,6 +171,7 @@ $(document).ready(function(){
         return false;
     });
 });
+	
 </script>
 
 <!-- That's it, Voila! Made it in 3 days. Congratulations (Jishan). -->
