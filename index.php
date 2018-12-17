@@ -1,36 +1,40 @@
 <?php 
 
-include("config.php");
-$all_brand=$db->query("SELECT distinct brand FROM `products` WHERE category_id = '1' GROUP BY brand");
-$all_material=$db->query("SELECT distinct material FROM `products` WHERE category_id = '1' GROUP BY material");
-$all_size=$db->query("SELECT distinct size FROM `products` WHERE category_id = '1' GROUP BY size");
-// Filter query
-    $sql= "SELECT distinct id FROM `products` WHERE category_id = '1'";
-    if(isset($_GET['brand']) && $_GET['brand']!="") :
-        $brand = $_GET['brand'];
-        $sql.=" AND brand IN ('".implode("','",$brand)."')";
-    endif;
+	include("config.php");
+	$all_brand=$db->query("SELECT distinct brand FROM `products` WHERE category_id = '1' GROUP BY brand");
+	$all_material=$db->query("SELECT distinct material FROM `products` WHERE category_id = '1' GROUP BY material");
+	$all_size=$db->query("SELECT distinct size FROM `products` WHERE category_id = '1' GROUP BY size");
 
-    if(isset($_GET['material']) && $_GET['material']!="") :
-        $material = $_GET['material'];
-        $sql.=" AND material IN ('".implode("','",$material)."')";
-    endif;
+	// Filter query
+	$sql= "SELECT distinct id FROM `products` WHERE category_id = '1'";
+	if(isset($_GET['brand']) && $_GET['brand']!="") :
+		$brand = $_GET['brand'];
+		$sql.=" AND brand IN ('".implode("','",$brand)."')";
+	endif;
 
-    if(isset($_GET['size']) && $_GET['size']!="") :
-        $size = $_GET['size'];
-        $sql.=" AND size IN (".implode(',',$size).")";
-    endif;
-    $all_product=$db->query($sql);
-    $content_per_page = 3;
-    $rowcount=mysqli_num_rows($all_product);
-    $total_data = ceil($rowcount / $content_per_page);
-    function data_clean($str)
-    {
-        return str_replace(' ','_',$str);
-    }
+	if(isset($_GET['material']) && $_GET['material']!="") :
+		$material = $_GET['material'];
+		$sql.=" AND material IN ('".implode("','",$material)."')";
+	endif;
+
+	if(isset($_GET['size']) && $_GET['size']!="") :
+		$size = $_GET['size'];
+		$sql.=" AND size IN (".implode(',',$size).")";
+	endif;
+
+	$all_product=$db->query($sql);
+	$content_per_page = 3;
+	$rowcount=mysqli_num_rows($all_product);
+	$total_data = ceil($rowcount / $content_per_page);
+	   
+	function data_clean($str){
+		return str_replace(' ','_',$str);
+	}
 
 ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -45,7 +49,6 @@ $all_size=$db->query("SELECT distinct size FROM `products` WHERE category_id = '
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- jQuery -->
         <script src="_/plugins/jquery.js"></script>
     </head>
     <body>
