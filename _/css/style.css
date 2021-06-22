@@ -38,11 +38,11 @@ body {
 }
 .list.panel.panel-pri {
   border: 0;
-  box-shadow: 0 0 6px 0px rgba(51, 51, 51, 0.4);
-  -o-box-shadow: 0 0 6px 0px rgba(51, 51, 51, 0.4);
-  -ms-box-shadow: 0 0 6px 0px rgba(51, 51, 51, 0.4);
-  -moz-box-shadow: 0 0 6px 0px rgba(51, 51, 51, 0.4);
-  -webkit-box-shadow: 0 0 6px 0px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 0 6px 0 rgba(51, 51, 51, 0.4);
+  -o-box-shadow: 0 0 6px 0 rgba(51, 51, 51, 0.4);
+  -ms-box-shadow: 0 0 6px 0 rgba(51, 51, 51, 0.4);
+  -moz-box-shadow: 0 0 6px 0 rgba(51, 51, 51, 0.4);
+  -webkit-box-shadow: 0 0 6px 0 rgba(51, 51, 51, 0.4);
 }
 .list.panel.panel-pri > .panel-heading {
   color: #333333;
