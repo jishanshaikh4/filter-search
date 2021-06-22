@@ -50,9 +50,8 @@ body {
   background-color: #2196f3;
 }
 .list.panel.panel-pri > .panel-heading .panel-title {
-  font-size: 20px;
-      color: #000;
-    font-size: 12px;
+    font-size: 20px;
+    color: #000;
     font-weight: 700;
     padding-bottom: 6px;
 }
