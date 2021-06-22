@@ -16,6 +16,7 @@ a:active {
   color: #1976d2;
   text-decoration: none;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #eeeeee;
@@ -50,10 +51,10 @@ body {
   background-color: #2196f3;
 }
 .list.panel.panel-pri > .panel-heading .panel-title {
-    font-size: 20px;
-    color: #000;
-    font-weight: 700;
-    padding-bottom: 6px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  padding-bottom: 6px;
 }
 .list.panel .panel-body {
   padding: 0;
